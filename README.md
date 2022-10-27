@@ -12,3 +12,13 @@ This resparatory contains the inital stage of AirBnB web application clone proje
 ```shell
 /AirBnB_clone$ ./console.py
 ```
+3. After step two the following prompt should apper:
+```
+(hbnb)
+```
+4. from varity of available commands insert your commans according to the following syntax:
+** Commands **
+```
+- create - Creats an instance based on given class
+- destroy - Destroys an object based on giden class and UUID
+- show - Shows an onject 
