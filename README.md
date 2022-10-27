@@ -4,3 +4,4 @@ This resparatory contains the inital stage of AirBnB web application clone proje
 | Tasks | Files | Description |
 | ---- | ---- | ----- |
 | 0. AUTHORS | [ AUTHORS ] (http://) | Project Authors |
+| 1. Unit Testing | [/tests](models/engine/__init__.py) | All class defining modules are unit tested |
