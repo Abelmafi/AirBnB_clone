@@ -5,8 +5,8 @@ This resparatory contains the inital stage of AirBnB web application clone proje
 | ---- | ---- | ----- |
 | 0. AUTHORS/README | [ AUTHORS ](models/AUTHORS) | Project Authors |
 | 1. Unit Testing | [/tests](models/engine/__init__.py) | All class defining modules are unit tested |
-| 2. Make BaseModel | [/models/base_model.py](models/base_model.py) | Defines parent classes to be inherited by all model classes |
-| 3. Create FileStorage class | [/models/engine/file_storage.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/engine/file_storage.py) [/models/__init__.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/init.py) [/models/base_model.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/base_model.py) | Defines a class to manage persistent file storage system|
+| 3. Make BaseModel | [/models/base_model.py](models/base_model.py) | Defines parent classes to be inherited by all model classes |
+| 4. Create FileStorage class | [/models/engine/file_storage.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/engine/file_storage.py) [/models/__init__.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/init.py) [/models/base_model.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/base_model.py) | Defines a class to manage persistent file storage system|
 | 5. Console 0.0.1 | [console.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/console.py) | Add basic functionality to console program, allowing it to quit, handle empty lines and ^D |
 | 6. Console 0.1 | [console.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/console.py) | Update the console with methods allowing the user to create, destroy, show, and update stored data |
 | 8. Create User class | [console.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/console.py) [/models/engine/file_storage.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/engine/file_storage.py) [/models/user.py](https://github.com/Abelmafi/AirBnB_clone/blob/dev/models/user.py) | Dynamically implements a user class |
