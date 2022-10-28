@@ -25,6 +25,27 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb) '
 
+    def precmd(self, line):
+        """Reformat the comand line for advanced command syntax.
+        Usage: <class name>.<command>([<id> [<*args> or <**kwargs>]])
+        """
+
+        _cmd = _cls = _id = ""
+        if not ('.' in line and '(' in line and ')' in line):
+            return line
+
+        try:
+            pline = line[:]
+            _cls = pline[:pline.find('.')]
+            _cmd = pline[pline.find('.') + 1:pline.find('(')]
+            _id = pline[pline.find('(') + 2 : pline.find(')') - 1]
+            line = ' '.join([_cmd, _cls, _id])
+        except exception as mess:
+            pass
+        finally:
+            return line
+
+
     def do_quit(self, *args):
         """
         This method exits the interpreter if the user
