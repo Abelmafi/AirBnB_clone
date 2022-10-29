@@ -30,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
         Usage: <class name>.<command>([<id> [<*args> or <**kwargs>]])
         """
 
-        _cmd = _cls = _id = ""
+        _cmd = _cls = _args = ""
         if not ('.' in line and '(' in line and ')' in line):
             return line
 
@@ -38,8 +38,12 @@ class HBNBCommand(cmd.Cmd):
             pline = line[:]
             _cls = pline[:pline.find('.')]
             _cmd = pline[pline.find('.') + 1:pline.find('(')]
-            _id = pline[pline.find('(') + 2 : pline.find(')') - 1]
-            line = ' '.join([_cmd, _cls, _id])
+            _args = pline[pline.find('(') + 1 : pline.find(')')]
+            _args = _args.split(', ')
+            if _args:
+                for i in range(len(_args)):
+                    _args[i] = _args[i].strip('"')
+                line = ' '.join([_cmd, _cls] + _args)
         except exception as mess:
             pass
         finally:
@@ -160,6 +164,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             item_search = args2[0] + "." + args2[1]
+
             item_all = storage.all()
             if item_search in item_all:
                 setattr(storage.all()[item_search],
