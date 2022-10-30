@@ -173,5 +173,19 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
+    def do_count(self, args):
+        """
+        This method count number of instance.
+        """
+        count = 0
+        for k, v in storage._FileStorage__objects.items():
+            if args == k.split('.')[0]:
+                count += 1
+            print(count)
+
+    def help_count(self):
+        """..."""
+        print("Usage: count <class_name>")
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
