@@ -8,7 +8,6 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
 
-
     def all(self):
         return FileStorage.__objects
 
@@ -20,7 +19,7 @@ class FileStorage:
         """..."""
         from models.base_model import BaseModel
         from models.user import User
-        with open (FileStorage.__file_path, 'w') as fd:
+        with open(FileStorage.__file_path, 'w') as fd:
             temp = {}
             temp.update(FileStorage.__objects)
             for key, values in temp.items():
@@ -43,4 +42,3 @@ class FileStorage:
                     self.all()[key] = classes[values['__class__']](**values)
         except FileNotFoundError:
             pass
-

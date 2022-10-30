@@ -69,6 +69,12 @@ class test_basemodel(unittest.TestCase):
         with self.assertRaises(TypeError):
             new = BaseModel(**my_input)
 
+    def test_kwargs_one(self):
+        """..."""
+        n = {'Name': 'Test'}
+        with self.assertRaises(KeyError):
+            new = self.value(**n)
+
     def test_id(self):
         """..."""
         cls = self.value()
