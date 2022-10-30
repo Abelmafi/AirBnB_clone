@@ -23,7 +23,10 @@ class test_basemodel(unittest.TestCase):
 
     def tearDown(self):
         """Runs after every tests"""
-        os.remove('file.json')
+        try:
+            os.remove('file.json')
+        except:
+            pass
 
     def test_default(self):
         """default test"""
