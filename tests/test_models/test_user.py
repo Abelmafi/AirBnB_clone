@@ -2,12 +2,12 @@
 """
 This module is the unittest file for the class: User.
 """
-#from models.user import User
-#from models.base_model import BaseModel
-#import unittest
+# from models.user import User
+# from models.base_model import BaseModel
+# import unittest
 #
 #
-#class testuser(unittest.TestCase):
+# class testuser(unittest.TestCase):
 #    """..."""
 #
 #    def __init__(self, *args, **kwargs):
@@ -35,7 +35,7 @@ from genericpath import exists
 import unittest
 from models.user import User
 from models.engine.file_storage import FileStorage
-#import pep8
+import pep8
 from models import storage
 
 
@@ -61,14 +61,14 @@ class TestBaseClass(unittest.TestCase):
         del self.User3
         storage.save()
 
-#    def test_pep8(self):
-#        """
-#        Testing pep8 compliance.
-#        """
-#        pep8style = pep8.StyleGuide(quiet=True)
-#        result = pep8style.check_files(['models/base_model.py'])
-#        self.assertEqual(result.total_errors, 0,
-#                         "Found code style errors (and warnings).")
+    def test_pep8(self):
+        """
+        Testing pep8 compliance.
+        """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/base_model.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
     def test_documentation(self):
         """
@@ -85,6 +85,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(self.User1.password, "")
         self.assertEqual(self.User1.first_name, "")
         self.assertEqual(self.User1.last_name, "")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -20,13 +20,10 @@ class test_basemodel(unittest.TestCase):
     def setUp(self):
         """Runs befoure every tests"""
         pass
-    
+
     def tearDown(self):
         """Runs after every tests"""
-        try:
-            os.remove('file.json')
-        except:
-            pass
+        os.remove('file.json')
 
     def test_default(self):
         """default test"""
@@ -60,7 +57,8 @@ class test_basemodel(unittest.TestCase):
     def test_str(self):
         """.."""
         cls = self.value()
-        self.assertEqual(str(cls), '[{}] ({}) {}'.format(self.name, cls.id, cls.__dict__))
+        str_t = '[{}] ({}) {}'.format(self.name, cls.id, cls.__dict__)
+        self.assertEqual(str(cls), str_t)
 
     def test_kwargs_none(self):
         """..."""
