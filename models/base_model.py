@@ -6,6 +6,7 @@ from datetime import datetime
 
 class BaseModel:
     """initilixing base model."""
+
     def __init__(self, *args, **kwargs):
         """Base model instance initilizition."""
         if not kwargs:
@@ -33,7 +34,6 @@ class BaseModel:
         """ Convert an instance in to modified dictionary format"""
         dictionary = {}
         dictionary.update(self.__dict__)
-
         dictionary.update({"__class__": type(self).__name__})
         dictionary["created_at"] = self.created_at.isoformat()
         dictionary["updated_at"] = self.updated_at.isoformat()
