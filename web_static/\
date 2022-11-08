@@ -29,7 +29,7 @@ h4 {
 	font-size: 14px;
 	margin: 2px 0px 15px 30px;
 }
-button.btn_text, button.btn_icon {
+button {
 	color: #FFFFFF;
 	font-size: 18px;
 
@@ -41,9 +41,6 @@ button.btn_text, button.btn_icon {
 
 	margin: auto 30px auto auto;
 	order: 3;
-}
-button.btn_icon {
-	display: none;
 }
 .popover {
 	display: none;
@@ -62,7 +59,7 @@ ul {
 	text-decoration: none;
 	padding: 0px;
 }
-h2, #id5, #id6 {
+h2 {
 	font-size: 16px;
 	padding-left: 20px;
 	padding-bottom: 5px;
@@ -84,30 +81,22 @@ button:hover {
         border-radius: 25px;
 	margin: auto;
 }
-button.btn_text {
-	display: none;
-}
-button.btn_icon {
-	display: block;
-	margin: auto 8px auto auto;
+button {
+	margin: auto 10px auto auto;
         height: 38px;
         width: 38px;
         border-radius: 50%;
-	text-align: center;
 }
-i.gg-search {
-	margin: auto;
-}
-#id5, #id6 {
-	display: none;	
+div.amenities h4, div.locations h4 {
+	display: none;
 }
 div.amenities h3, div.locations h3 {
         font-weight: 500;
         margin-left: 15px;
 }
 .popover {
-	width: 250%;
+	width: 300px;
+	padding: 40px 0px;
 	border-radius: 10px;
-	margin-top: 15px;
 }
 }

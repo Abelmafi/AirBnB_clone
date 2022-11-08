@@ -11,3 +11,6 @@ body {
 	max-width: 1000px;
 	margin: 30px auto;
 }
+@media only screen and (max-size: 512px) {
+	margin: 20px auto;
+}

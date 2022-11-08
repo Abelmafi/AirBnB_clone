@@ -129,3 +129,53 @@ article div.reviews li {
 	font-size: 12px;
 	text-align: left;
 }
+@media only screen and (max-width: 512px) {
+	.places h1 {
+        margin: 15px 20px 0px;
+        font-size: 24px;
+}
+article {
+        border-radius: 10px;
+	margin-top: 15px;
+}
+
+article div.header h2 {
+        font-size: 20px;
+}
+.price_by_night {
+        font-size: 20px;
+
+        min-width: 40px;
+        height: 40px;
+	border: 3px solid #FF5A5F;
+        line-height: 40px;
+}
+.information {
+        height: 60px;
+}
+.max_guest, .number_rooms, .number_bathrooms {
+        line-height: 7em;
+}
+.max_guest, .number_rooms, .number_bathrooms {
+	background-size: 35px;
+}
+article div.amenities, article div.reviews {
+        margin-top: 10px;
+}
+article div.amenities ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+article div.reviews ul li h3 {
+	margin-top: 4px;
+	font-weight: 600;
+}
+article div.reviews ul li p {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	size: 12px;
+}
+article div.amenities ul {
+	margin-top: 5px;
+}
+}
